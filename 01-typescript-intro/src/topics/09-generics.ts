@@ -1,13 +1,17 @@
 
 
-export function whtasMyType( argument: any ) : any {
+export function whtasMyType<T>( argument: T ) : T {
 
     return argument
 }
 
 
-const amIString = whtasMyType('Hola Mundo');
+let amIString = whtasMyType<string>('Hola Mundo');
+let amINumber = whtasMyType<number>(100);
+let amIArray = whtasMyType<number[]>([1,2,3,4,5]);
 
-console.log(amIString.split());
+console.log(amIString.split);
+console.log(amINumber.toFixed());
+console.log(amIArray.join('-'));
 
 
